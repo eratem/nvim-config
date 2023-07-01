@@ -108,7 +108,7 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         theme = 'onedark',
         component_separators = '|',
         section_separators = '',
@@ -206,11 +206,13 @@ vim.o.timeout = true
 vim.o.timeoutlen = 300
 
 -- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
+vim.opt.completeopt = { 'menuone', 'noselect' }
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+-- import additional custom settings
+require("lua.custom.set")
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
