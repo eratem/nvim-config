@@ -212,7 +212,7 @@ vim.opt.completeopt = { 'menuone', 'noselect' }
 vim.o.termguicolors = true
 
 -- import additional custom settings
-require("lua.custom.set")
+require("custom.set")
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
