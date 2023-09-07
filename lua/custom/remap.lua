@@ -16,6 +16,7 @@ return {
 	vim.keymap.set("v", "<leader>x", [["_d]], { desc = '[D]elete without writing to [R]egister' }),
 	vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
 		{ desc = 'search and replace word under cursor' }),
+	vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "use Escape to leave insert in terminal" }),
 
 	-- Bindings by kickstart nvim
 	-- See `:help vim.keymap.set()`
