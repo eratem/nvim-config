@@ -345,7 +345,20 @@ end
 local servers = {
   clangd = {},
   -- gopls = {},
-  pylsp = {},
+  pylsp = {
+    pylsp = {
+      plugins = {
+        ruff = { enabled = true, extendSelect = { "I" }, lineLength = 88 },
+        black = { enabled = true },
+        mypy = { enabled = true },
+        yapf = { enabled = false },
+        pyflakes = { enabled = false },
+        autopep8 = { enabled = false },
+        mccabe = { enabled = false },
+        pycodestyle = { enabled = false },
+      }
+    }
+  },
   rust_analyzer = {},
   -- tsserver = {},
 
