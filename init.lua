@@ -383,7 +383,6 @@ local servers = {
       }
     }
   },
-  rust_analyzer = {},
   -- tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
@@ -418,9 +417,6 @@ mason_lspconfig.setup_handlers {
       filetypes = (servers[server_name] or {}).filetypes,
     }
   end,
-  ["rust_analyzer"] = function()
-    require("rust-tools").setup {}
-  end
 }
 
 -- [[ Configure nvim-cmp ]]
