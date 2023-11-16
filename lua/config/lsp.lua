@@ -49,10 +49,12 @@ local servers = {
 	pylsp = {
 		pylsp = {
 			plugins = {
+				jedy = { environment = "./venv/" },
 				-- `PylspInstall python-lsp-ruff`
 				ruff = { enabled = true, extendSelect = { "I", "B" }, lineLength = 88 },
 				-- `:PylspInstall pylsp-mypy`
 				mypy = { enabled = true },
+				pycodestyle = { maxLineLength = 88 },
 				yapf = { enabled = false },
 				autopep8 = { enabled = false },
 			}
