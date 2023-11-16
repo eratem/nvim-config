@@ -12,38 +12,38 @@ local keys = {
 	mapkey("n", "<leader>sd", "Telescope diagnostics", { desc = '[s]earch [d]iagnostics' }),
 	mapkey("n", "<leader>sr", "Telescope resume", { desc = '[s]earch [r]esume' }),
 	vim.keymap.set('n', '<leader>/', function()
-	  -- You can pass additional configuration to telescope to change theme, layout, etc.
-	  require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-	    winblend = 10,
-	    previewer = false,
-	  })
+		-- You can pass additional configuration to telescope to change theme, layout, etc.
+		require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+			winblend = 10,
+			previewer = false,
+		})
 	end, { desc = '[/] Fuzzily search in current buffer' }),
 }
 -- See `:help telescope` and `:help telescope.setup()`
 local defaults = {
-    mappings = {
-      i = {
-        ['<C-u>'] = false,
-        ['<C-d>'] = false,
-      },
-    }
+	mappings = {
+		i = {
+			['<C-u>'] = false,
+			['<C-d>'] = false,
+		},
+	}
 }
 return {
-    'nvim-telescope/telescope.nvim',
-    branch = '0.1.x',
-    lazy = false,
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      {
-        'nvim-telescope/telescope-fzf-native.nvim',
-        build = 'make',
-        cond = function()
-          return vim.fn.executable 'make' == 1
-        end,
-        config = function()
-	    require("telescope").load_extension("fzf")
-        end,
-      },
-    },
-    defaults = defaults,
+	'nvim-telescope/telescope.nvim',
+	branch = '0.1.x',
+	lazy = false,
+	dependencies = {
+		'nvim-lua/plenary.nvim',
+		{
+			'nvim-telescope/telescope-fzf-native.nvim',
+			build = 'make',
+			cond = function()
+				return vim.fn.executable 'make' == 1
+			end,
+			config = function()
+				require("telescope").load_extension("fzf")
+			end,
+		},
+	},
+	defaults = defaults,
 }

@@ -53,7 +53,6 @@ end
 --  define the property 'filetypes' to the map in question.
 local servers = {
   clangd = {},
-  -- gopls = {},
   sqlls = {},
   pylsp = {
     pylsp = {
@@ -63,15 +62,10 @@ local servers = {
         -- `:PylspInstall pylsp-mypy`
         mypy = { enabled = true },
         yapf = { enabled = false },
-        pyflakes = { enabled = false },
         autopep8 = { enabled = false },
-        mccabe = { enabled = false },
-        pycodestyle = { enabled = false },
       }
     }
   },
-  -- tsserver = {},
-  -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   lua_ls = {
     Lua = {
