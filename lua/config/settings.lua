@@ -53,4 +53,10 @@ vim.o.timeout = true
 vim.o.timeoutlen = 300
 
 -- Set completeopt to have a better completion experience
-vim.opt.completeopt = { 'menuone', 'noselect' }
+vim.opt.completeopt = { 'menuone', 'noselect', 'noinsert' }
+
+-- Set defaults for window split
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+vim.opt.encoding = "UTF-8"
