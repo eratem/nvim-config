@@ -4,8 +4,5 @@ return {
   -- See `:help indent_blankline.txt`
   main = "ibl",
   lazy = false,
-  opts = {
-    char = '┊',
-    show_trailing_blankline_indent = false,
-  },
+  opts = {},
 }
