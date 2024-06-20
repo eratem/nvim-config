@@ -29,6 +29,12 @@ local config = function()
             enable = true,
         },
     })
+    vim.filetype.add({
+        pattern = {
+            ['.*.pg'] = 'postgres',
+        },
+    })
+    vim.treesitter.language.register('sql', { 'postgres' })
 end
 
 return

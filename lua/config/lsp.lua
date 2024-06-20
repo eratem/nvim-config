@@ -45,13 +45,17 @@ end
 --  define the property 'filetypes' to the map in question.
 local servers = {
 	clangd = {},
-	sqlls = {},
 	pylsp = {
 		pylsp = {
 			plugins = {
 				jedy = { environment = "./venv/" },
 				-- `PylspInstall python-lsp-ruff`
-				ruff = { enabled = true, extendSelect = { "I", "B" }, lineLength = 88 },
+				ruff = {
+					enabled = true,
+					extendSelect = { "I", "B" },
+					format = { "I" },
+					lineLength = 88
+				},
 				-- `:PylspInstall pylsp-mypy`
 				mypy = { enabled = true },
 				pycodestyle = { maxLineLength = 88 },

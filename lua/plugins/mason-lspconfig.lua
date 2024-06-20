@@ -6,7 +6,6 @@ local opts = {
 		"lua_ls",
 		"jsonls",
 		"clangd",
-		"sqlls",
 	},
 
 	automatic_installation = true,
