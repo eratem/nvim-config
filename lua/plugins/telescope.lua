@@ -11,6 +11,8 @@ local keys = {
 	mapkey("n", "<leader>sg", "Telescope live_grep", { desc = '[s]earch by [g]rep' }),
 	mapkey("n", "<leader>sd", "Telescope diagnostics", { desc = '[s]earch [d]iagnostics' }),
 	mapkey("n", "<leader>sr", "Telescope resume", { desc = '[s]earch [r]esume' }),
+	mapkey('n', '<leader>sk', 'Telescope keymaps', { desc = '[s]earch [k]eymaps' }),
+	mapkey('n', '<leader>ss', 'Telescope builtin', { desc = '[s]earch tele[s]cope' }),
 	vim.keymap.set('n', '<leader>/', function()
 		-- You can pass additional configuration to telescope to change theme, layout, etc.
 		require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
@@ -30,8 +32,8 @@ local defaults = {
 }
 return {
 	'nvim-telescope/telescope.nvim',
+	event = 'VimEnter',
 	branch = '0.1.x',
-	lazy = false,
 	dependencies = {
 		'nvim-lua/plenary.nvim',
 		{

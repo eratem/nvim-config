@@ -1,9 +1,15 @@
+-- Enable Nerd Font
+vim.g.have_nerd_font = true
+
 -- See `:help vim.o`
 vim.opt.nu = true
 
 -- Make line numbers default
 vim.wo.number = true
 vim.opt.relativenumber = true
+
+-- Disable redundant showing of mode
+vim.opt.showmode = false
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -24,7 +30,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 -- Set highlight on search
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
 vim.o.ignorecase = true
@@ -33,7 +39,7 @@ vim.o.smartcase = true
 -- use full color depth
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 5
 vim.opt.signcolumn = "yes"
 
 -- have a highlighted column at 80 characters
