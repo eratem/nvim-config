@@ -6,5 +6,14 @@ return {
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
   -- easily change the surroundings of your selection (parentheses)
-  'tpope/vim-surround',
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- config here
+      })
+    end
+  },
 }
